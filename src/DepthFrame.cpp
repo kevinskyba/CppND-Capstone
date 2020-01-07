@@ -9,6 +9,6 @@ DepthFrame::DepthFrame(size_t width, size_t height, float *data)
 
 }
 
-float *DepthFrame::getData() {
+float *DepthFrame::getData() const {
     return data_.get();
 }

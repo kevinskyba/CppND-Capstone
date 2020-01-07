@@ -9,6 +9,9 @@
 #include <memory>
 #include "DepthFrame.h"
 
+/**
+ * DepthCapture is a generic abstract class which can be overriden to provide different sources of DepthFrames.
+ */
 class DepthCapture {
 public:
     virtual void start() = 0;

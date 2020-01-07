@@ -14,6 +14,10 @@
 
 #include "DepthCapture.h"
 
+/**
+ * KinectDepthCapture is the implementation of DepthCapture which does require a Kinect V2 (Xbox One).
+ * It will connect to the device using libfreenect2.
+ */
 class KinectDepthCapture : public DepthCapture {
 public:
 
@@ -24,6 +28,7 @@ public:
     void stop() override;
     bool available() override;
     std::shared_ptr<DepthFrame> getFrame() override;
+    void save(const std::string& path);
 
 private:
     libfreenect2::Freenect2 freenect2_;
