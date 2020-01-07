@@ -35,11 +35,11 @@ show the point cloud created from the example data and re-aligned by Align.
 ## Requirements
 - Ubuntu 16.04 or higher
 - GCC 7.2.0
-- cmake
+- cmake 3.5 or higher
 - [PCL](http://www.pointclouds.org/)
     - `sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl`
     - `sudo apt-get update`
-    - `sudo apt-get install libpcl-all`
+    - `sudo apt-get install libpcl1.7`
 - [Super4PCS](https://github.com/nmellado/Super4PCS)
     - Download sources
     - Compile using regular cmake and make commands
@@ -49,7 +49,7 @@ show the point cloud created from the example data and re-aligned by Align.
     
 ## Compile
 When all the requirements are installed, you can run `mkdir build && cd build` and run
-`cmake -DKINECT=OFF -Dfreenect2_DIR={where_you_installed_freenect}freenect2/lib/cmake/freenect2 -DSuper4PCS_DIR=/usr/local/lib/cmake/ ..`.
+`cmake -DKINECT=TRUE -Dfreenect2_DIR={where_you_installed_freenect}freenect2/lib/cmake/freenect2 -DSuper4PCS_DIR=/usr/local/lib/cmake/ ..`.
 
 **NOTE: `-DKINECT=TRUE -Dfreenect2_DIR` is not required if you do not own a Kinect V2.**
 
